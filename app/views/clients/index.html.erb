@@ -1,18 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="container">
-  <h1>Clients</h1>
-
-  <%= link_to "New client", new_client_path %>
-
+<div class="container border-4 mt-5 ">
+  <h1 class="fs-2 machine-font mt-2">Lista Clientes</h1>
+  
   <div id="clients">
-    <table class="table table-bordered">
-      <thead>
+    <table class="table table-bordered tab">
+      <thead class="tab_head">
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">Age</th>
-          <th scope="col">Movie</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Pelicula Arrendada</th>
           <th scope="col" colspan="3"></th>
         </tr>
       </thead>
@@ -23,4 +21,5 @@
       </tbody>
     </table>
   </div>
+  <%= link_to "Agregar Cliente", new_client_path, class: "btn btn-primary" %>
 </div>

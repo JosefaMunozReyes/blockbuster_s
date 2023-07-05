@@ -18,6 +18,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/1/edit
   def edit
+    @movie = Movie.find(params[:id])
   end
 
   # POST /movies or /movies.json
@@ -70,6 +71,6 @@ class MoviesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.require(:movie).permit(:name, :client_id)
+      params.require(:movie).permit(:name, :client_id, )
     end
 end
